@@ -36,7 +36,7 @@ function Table() {
       if (search.trim() !== "") {
         queryParams.append("search", search.trim());
       }
-      const url = `http://localhost:3000/api/getData?${queryParams.toString()}`;
+      const url = `https://roxiler-backend-ajc4.onrender.com/api/getData?${queryParams.toString()}`;
       const res = await fetch(url);
       const data = await res.json();
       setTransactions(data);
